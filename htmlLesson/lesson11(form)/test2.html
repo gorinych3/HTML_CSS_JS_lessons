@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="radio" name="hotornot" value="горячо" id="hot">
+    <label for="hot">горячо</label>
+    <input type="radio" name="hotornot" value="нет" id="not">
+    <label for="not">нет</label>
+    <p>
+        <fieldset>
+            <legend>Condiments</legend>
+            <input type="checkbox" name="spice" value="соль">
+            Соль <br>
+            <input type="checkbox" name="spice" value="перец">
+            Перец <br>
+            <input type="checkbox" name="spice" value="чеснок">
+            Чеснок
+        </fieldset><br>
+    </p>
+    <p>
+        <input type="password" name="secret"><br>
+    </p>
+
+    <p>
+        <input type="file" name="doc"><br>
+    </p>
+    <p>
+        <select name="characters" multiple="multiple">
+            <option value="Баккару">Баккару Банзай</option>
+            <option value="Томми">Чудесный Томми</option>
+            <option value="Пенни">Пенни Придди</option>
+            <option value="Джерси">Нью-Джерси</option>
+            <option value="Джон">Джон Паркер</option>
+        </select>
+    </p>
+
+    <p>
+        <input type="text" placeholder="Buckaroo Banzai"> <!--подсказка для пользователя, как вводить данные-->
+    </p>
+    <p>
+        <input type="text" placeholder="Buckaroo Banzai" required>
+    </p>
+
+
+    <!--Мы применяем идентификатор формы, чтобы получить к ней доступ на JavaScript для осуществления различных действий-->
+    <!--вроде определения того, что произойдет, когда пользователь щелкнет на кнопке.-->
+    <!--Это небольшой сценарий на JavaScript, который проверяет предлагаемую пользователям цену, чтобы убедиться, что она-->
+    <!--не равна 0 долларов и менее.-->
+    <!--Если предлагаемая цена окажется больше 0, то мы отправим форму; в противном случае мы не станем ее-->
+    <!--отправлять, поскольку возникнет ошибка.-->
+    <!--Затем, используя HTML, вы можете создать форму, которая задействует данный сценарий для проверки -->
+    <!--предлагаемой цены до отправки формы. Если предлагаемая цена окажется больше 0, то форма будет отправлена-->
+    <script>
+        window.onload = init;
+        function init() {
+            var submitButton = document.getElementById("submitButton");
+            submitButton.onclick = validBid;
+        }
+        function validBid() {
+            if (document.getElementById("bid").value > 0) {
+                document.getElementById("theForm").submit();
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <form id="theForm" method="post" action="contest.php">
+        <input type="number" id="bid" value="0"><br>
+        <input type="button" id="submitButton" value="Предлагаемая цена!"><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-size: 14px; /*Задавайте размер шрифта с помощью свойства font-size*/
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+/*
+Вы можете определить размер
+шрифта как xx-small, x-small, small, medium, large,
+x-large или xx-large
+Каждый следующий размер примерно на 20 %
+больше предыдущего, а small обычно равен 12 пикселам
+в высоту
+как
+правило, размер шрифта <h1> составляет
+200 % от размера шрифта, используемого
+по умолчанию для элемента body, <h2> —
+150 %, <h3> — 120 %, <h4> — 100 %, <h5> —
+90 % и <h6> — 60 %.
+*/
+body {
+    font-size: small;
+    font-style: italic;  /*наклонный или нет*/
+}
+
+body { font-size: small; }
+h1 { font-size: 150%; }
+h2 { font-size: 120%; }
+
+body {
+    color: silver; /*Определяйте цвет текста с помощью свойства color*/
+}
+
+body {
+    background-color: rgb(80%, 40%, 0%);
+}
+body {
+    background-color: rgb(204, 102, 0);
+}
+body {
+    background-color: #cc6600;
+}
+
+body {
+    font-weight: bold; /*Назначайте начертание шрифтов с помощью свойства font-weight //жирность*/
+}
+
+body {
+    text-decoration: underline; /*Оформляйте свой текст еще лучше с помощью свойства text-decoration //подчеркнутый*/
+}
+
+body {
+    /*желательно указать шрифты для разных ОС (винда, мак и линукс), а потом базовый sans-serif или serif*/
+    font-family: Verdana, Geneva, Arial, "Courier New", sans-serif; /*будет использован шрифт первый из списка, имеющийся в браузере*/
+}
+
+
+/*перед тем, как выполнить данную команду, необходимо разместить свои уникальные шрифты на сайтах*/
+@font-face {
+    font-family: "Emblema One";
+    src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"),
+    url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf");
+}
+
+h1 {
+    font-family: "Emblema One", sans-serif;
+}
+
+
+

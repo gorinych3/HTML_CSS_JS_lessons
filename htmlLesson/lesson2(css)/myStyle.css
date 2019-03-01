@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+h1, h2 {
+    /*font-family: sans-serif;*/
+    color: gray;
+}
+h1 {border-bottom: 1px solid black;}
+p {
+    color: maroon;
+    /*font-family: sans-serif;*/
+}
+em {
+    font-family: serif;
+}
+
+p.greenTea {
+    color: green;
+}
+
+p.raspberry {
+    color: blue;
+}
+
+p.blueberry {
+    color: purple;
+}
+
+/*перед тем, как выполнить данную команду, необходимо разместить свои уникальные шрифты на сайтах*/
+@font-face {
+    font-family: "Emblema One";
+    src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"),
+    url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf");
+}
+
+h1 {
+    font-family: "Emblema One", sans-serif;
+}
